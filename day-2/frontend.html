@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      #container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, auto);
+      gap: 20px;
+    }
+    p + img {
+      height: 50px;
+    }
+      
+
+    </style>
+    
+  </head>
+  <body>
+
+    <div id="navbar">
+      <div><a href="backend.html">Backend</a></div>
+      <div> <a href="frontend.html">Frontend</a></div> </div>
+    </div>
+
+
+    
+    <div id="container"></div>
+  </body>
+</html>
+
+<script>
+
+
+  var investorsArr = JSON.parse(localStorage.getItem("investorsData")) || [];
+ 
+investorsArr.forEach(function(el) {
+
+  var box= documentt.createElement("div");
+
+var profileImg= document.createElement("img");
+profileImg.setAttribute("src", el.investorImg)
+
+var profileName= document.createElement("h3");
+profileName.innerText = el.investorName;
+
+var profileRole= document.createElement("p");
+profileRole.innerText = el.investorRole;
+
+var profileLogo= document.createElement("img");
+profileLogo.setAttribute("src", el.investorLogo)
+
+box.append(profileImg,profileName,profileRole,profileLogo);
+
+document.querySelector("#container").append(box);
+
+});  
+
+
+</script>

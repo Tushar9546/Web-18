@@ -1,0 +1,27 @@
+
+
+#products {
+    display: grid;
+   
+    gap:20px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+div>img{
+    width:100%;
+}
+
+
+
+div>h3{
+    padding-left: 10px;
+}
+
+div>button{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+div>p{
+    padding-left: 10px;
+}

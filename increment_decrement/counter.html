@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>incremenr-decrement</title>
+    <style>
+        
+
+      
+        button{
+            background-color: red;
+            color:white;
+            border:0px;
+            height: 40px;
+            width:150px;
+        }
+
+        button:hover{
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+ 
+            <h1><i></i></h1>
+
+         
+            <button id="dec">Decrement</button>
+            <button id="inc">Increment</button>
+      
+   
+  </body>
+</html>
+
+<script>
+  var count = localStorage.getItem("counterValue") || 0;
+
+  document.querySelector("h1").innerText = count;
+
+  document.querySelector("#dec").addEventListener("click", decFun);
+  function decFun() {
+    count--;
+    document.querySelector("h1").innerText = count;
+    localStorage.setItem("counterValue", count);
+  }
+
+  document.querySelector("#inc").addEventListener("click", incFun);
+  function incFun() {
+    count++;
+    document.querySelector("h1").innerText = count;
+    localStorage.setItem("counterValue", count);
+  }
+
+  
+</script>

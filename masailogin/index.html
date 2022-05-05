@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+
+    <div id="img">
+      <img src="https://sso.masaischool.com/brand_dark.svg" alt="masai" />
+
+    </div>
+    
+    <form id="form">
+      
+      <h2>Sign up</h2>
+
+      <h3>Full name</h3>
+      <input placeholder="Enter Name" id="name"  type="text" />
+
+      <h3>Email</h3>
+      <input placeholder="Enter email" type="email"  id="email" />
+
+      <h3>Password</h3>
+      <input type="password" id="pwd" name="pwd">
+
+      <p>By signing up, I accept Masai School <u>Terms of Service</u> and acknowledge the<u> privacy Policy</u></p>
+
+      <button id="button">SIGN UP</button>
+
+      <div><p>Already have an account?<a href="login.html">Sign In</a></p></div>
+
+      
+
+      
+    </form>
+  </body>
+
+  <script>
+    var form=document.querySelector("#form");
+
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+
+      var data={
+        name:form.name.value,
+        email:form.email.value,
+        pwd:form.pwd.value,
+      }
+      //console.log(data);
+      localStorage.setItem("userData", JSON.stringify(data));
+    });
+
+  </script>

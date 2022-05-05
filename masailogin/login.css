@@ -1,0 +1,68 @@
+
+
+*{
+    font-family: calibri;
+}
+
+
+#img{
+    padding-left: 45%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+}
+#form{
+    margin-top: 50px;
+    border-radius: 10px;
+    display:grid;
+    width:35%;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    color:rgb(71, 70, 70);
+    padding-left: 42px;
+ 
+}
+
+#email{
+    width:80%;
+    margin: auto;
+    margin-top: -10px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+}
+
+#pwd{
+    width:80%;
+    margin: auto;
+    margin-top: -10px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+}
+
+#button{
+    width:80%;
+    margin: auto;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+    margin-bottom: 40px;
+}
+
+
+button:hover{
+    color:white;
+    background-color: green;
+
+}
+
+

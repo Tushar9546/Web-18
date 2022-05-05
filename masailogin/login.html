@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+
+    <div id="img">
+      <img src="https://sso.masaischool.com/brand_dark.svg" alt="masai" />
+
+    </div>
+    
+    
+
+   
+
+    <form id="form">   
+      <h2>Logn In</h2>
+
+      <h3>Email</h3>
+      <input placeholder="Enter email" type="email"  id="email" />
+
+      <h3>Password</h3>
+      <input type="password" id="pwd" name="pwd">
+
+      <button id="button">Log In</button>
+
+      
+
+       
+    </form>
+  </body>
+
+  <script>
+    var form= document.querySelector("#form");
+
+    var userData=JSON.parse(localStorage.getItem("userData"));
+
+    form.addEventListener("submit", function(event){
+      event.preventDefault();
+
+      var data = {
+        email:form.email.value,
+        pwd:form.pwd.value,
+      }
+
+      if(userData==null){
+        alert("please Creat an account");
+      }else if(userData.email==data.email && userData.pwd==data.pwd){
+        alert("Sign in Successful")
+
+        localStorage.setItem("signin", JSON.stringify(userData));
+      }else{
+        alert("Wrong Id or Wrong Password")
+      }
+
+
+
+    })
+  </script>
